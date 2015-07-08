@@ -1,0 +1,52 @@
+140430: Changed touchpad settings to disable touchpad movement but keep clicking in upper part of it. Copied /usr/share/X11/xorg.conf.d/50-synaptics.conf to /etx/X11/xorg.conf.d/50-synaptics.conf. Edited /etx/X11/xorg.conf.d/50-synaptics.conf. Original file is saved as ~/Documents/configurations/50-synaptics.conf.
+
+140524: Network manager was not working properly. Disabled Network Manager and installed 
+	Wicd. sudo apt-get install -d --reinstall network-manager network-manager-gnome
+	sudo apt-get install wicd-gtk wicd
+	sudo apt-get remove --purge network-manager-gnome network-manager
+
+140524: Wicd system tray icon did not show up. Added ppa to fix.
+	     sudo apt-add-repository ppa:gurqn/systray-trusty
+	     sudo apt-get update
+	     sudo apt-get upgrade
+	Log out and log in. For updates:
+            sudo emacs /etc/apt/preferences.d/systray-trusty
+	Add lines:
+	    Package: *
+	    Pin: release o=LP-PPA-gurqn-systray-trusty
+	    Pin-Priority: 600
+
+140526: Diabled ready sound played when log in screen is displayed. 
+	cd /usr/share/sounds/ubuntu/stereo/
+	sudo mv system-ready.ogg system-ready.disabled
+
+140530: Added synclient commands to /home/jocke/.profile as a work-around for the fact that 50-synaptics.conf settings would not stay permanent.
+
+140616: Installed firewall ufw and graphical front-end gufw. May need to add exceptions for Skype and the like.  
+
+140616: Installed antivirus clamav and and graphical front-end clamtk.
+
+140616: Missing characters in evince. Fixed by uninstalling fonts-texgyre.
+
+140618: Installed trash-cli and aliased rm='trash' in .bashrc to put files in trash when issuing command rm.  
+
+140621: Was having problems with eduroam and wicd. Reinstalled Network Manager and uninstalled wicd. Did not remove the wicd system tray icon ppa package.
+	sudo apt-get install --reinstall network-manager-gnome network-manager
+	sudo apt-get install network-manager-gnome network-manager
+	sudo apt-get remove --purge wicd wicd-gtk wicd-daemon
+
+140630: Turned off touchpad movement by editing /etx/X11/xorg.conf.d/50-synaptics.conf (AreaBottomEdge=1 and AreaTopEdge=0).
+        
+150211: Installed Mathematica 10. In the last step I got the message: 
+        The scripts 'mcc' already exist in the directory /usr/local/bin. The following actions can be performed on the existing file(s).
+
+          (1) Overwrite
+          (2) Rename
+          (3) Cancel
+
+          Type your selection, or press ENTER to select (1):
+          > 2
+
+          Type a file name extension to be appended to the name of the existing file(s), or press ENTER to select (.old):
+          >
+          Hence, what I did was to rename the existing mcc to mcc.old. 

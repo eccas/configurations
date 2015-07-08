@@ -1,0 +1,5 @@
+sudo ln -s /usr/include/freetype2/ /usr/include/freetype
+cd root
+./configure --enable-python --with-python-incdir=/usr/include/python2.7/ --with-python-libdir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-soversion
+make
+. bin/thisroot.sh

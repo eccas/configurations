@@ -1,0 +1,39 @@
+<keyboard>
+  <file-info>
+    <syntax-version>1.2</syntax-version>
+    <last-change format="%d-%m-%Y">22-07-2014</last-change>
+    <author></author>
+  </file-info>
+  <keyboard-info>
+    <keyboard-name>
+      <manufacturer>Lenovo</manufacturer>
+      <model>E540</model>
+    </keyboard-name>
+  </keyboard-info>
+  <key-list>
+    <key>
+      <name>Multimeda F9</name>
+      <scancode>28</scancode>
+      <keycode>AGAIN</keycode>
+      <default-action></default-action>
+    </key>
+    <key>
+      <name>Multimeda F10</name>
+      <scancode>29</scancode>
+      <keycode>BACK</keycode>
+      <default-action></default-action>
+    </key>
+    <key>
+      <name>Multimeda F11</name>
+      <scancode>30</scancode>
+      <keycode>BOOKMARKS</keycode>
+      <default-action></default-action>
+    </key>
+    <key>
+      <name>Multimeda F12</name>
+      <scancode>31</scancode>
+      <keycode>CALC</keycode>
+      <default-action>~/.toggleTouchpad</default-action>
+    </key>
+  </key-list>
+</keyboard>
